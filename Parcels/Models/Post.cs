@@ -27,7 +27,7 @@ namespace Parcels.Models
     {
       return _width; //need to be switched with get. Think "What do I  --GET-- in --return--"
     }
-    public int SetWidth(int width)
+    public void SetWidth(int width)
     {
       _width = width;
     }
@@ -36,7 +36,7 @@ namespace Parcels.Models
     {
       return _weight;
     }
-    public int SetWeight(int weight)
+    public void SetWeight(int weight)
     {
       _weight = weight;
     }
@@ -44,7 +44,7 @@ namespace Parcels.Models
     {
       return _weight;
     }
-    public int SetLength(int length)
+    public void SetLength(int length)
     {
       _length = length;
     }
@@ -52,7 +52,7 @@ namespace Parcels.Models
     {
       return _height;
     }
-    public int SetHeight(int height)
+    public void SetHeight(int height)
     {
       _height = height;
     }
@@ -60,21 +60,18 @@ namespace Parcels.Models
     {
       return _length * _width * _height;
     }
-    public int SetVolume(int volume)
+    public void SetVolume(int volume)
     {
       _volume = volume;
     }
     public int GetCost()
     {
-      return _cost;
+      return (_length * _height) /2;
     }
-    public int SetCost(int cost)
+    public void SetCost(int cost)
     {
       _cost = cost;
     }
-
-    public string DisplayDimension
-
     public static List<Parcel> GetAll()
     {
       return _instances;
